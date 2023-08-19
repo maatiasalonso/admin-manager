@@ -1,4 +1,3 @@
-"use client";
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
@@ -7,7 +6,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
-import { useEffect } from "react";
+import Preline from "./preline";
 
 export const metadata: Metadata = {
   title: {
@@ -31,9 +30,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    import("preline");
-  }, []);
+  <Preline />;
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
