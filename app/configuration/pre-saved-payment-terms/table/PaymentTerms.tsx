@@ -17,7 +17,7 @@ import BottomContent from "./BottomContent";
 import TopContent from "./TopContent";
 import Actions from "./Actions";
 
-const INITIAL_VISIBLE_COLUMNS = ["name", "description", "actions"];
+const INITIAL_VISIBLE_COLUMNS = ["name", "actions"];
 
 const TablePaymentTerms: React.FC = () => {
   const [filterValue, setFilterValue] = React.useState("");
@@ -127,12 +127,6 @@ const TablePaymentTerms: React.FC = () => {
       switch (columnKey) {
         case "name":
           return <p>{cellValue}</p>;
-        case "description":
-          return (
-            <div className="flex flex-col">
-              <p className="text-bold text-small capitalize">{cellValue}</p>
-            </div>
-          );
         case "actions":
           return <Actions onOpenDeleteModal={onOpenDeleteModal} />;
         default:
