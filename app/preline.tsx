@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 const Preline: any = () => {
-  return useEffect(() => {
+  useEffect(() => {
     import("preline");
   }, []);
 };
