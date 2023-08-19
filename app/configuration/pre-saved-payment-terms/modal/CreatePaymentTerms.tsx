@@ -351,7 +351,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                   isLoading={isLoading}
                   onClick={save}
                 >
-                  Add
+                  {isLoading ? "Adding" : "Add"}
                 </Button>
               </ModalFooter>
             </>

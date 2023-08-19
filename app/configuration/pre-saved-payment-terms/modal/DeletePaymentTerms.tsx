@@ -57,7 +57,7 @@ const DeleteModal: React.FC<DeleteModalProps> = ({ isOpen, onClose }) => {
                   isLoading={isLoading}
                   className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 px-8"
                 >
-                  Delete
+                  {isLoading ? "Deleting" : "Delete"}
                 </Button>
               </ModalFooter>
             </>
