@@ -11,8 +11,8 @@ import {
   Selection,
 } from "@nextui-org/react";
 import { columns, paymentTerms } from "../data";
-import CreatePaymentTermsModal from "../modal/CreatePaymentTermsModal";
-import DeletePaymentTermsModal from "../modal/DeletePaymentTermsModal";
+import CreatePaymentTermsModal from "../modal/CreatePaymentTerms";
+import DeletePaymentTermsModal from "../modal/DeletePaymentTerms";
 import BottomContent from "./BottomContent";
 import TopContent from "./TopContent";
 import Actions from "./Actions";
@@ -194,7 +194,9 @@ const TablePaymentTerms: React.FC = () => {
             <TableColumn
               key={column.uid}
               align={column.uid === "actions" ? "center" : "start"}
+              className={column.uid === "actions" ? "text-center" : ""}
               allowsSorting={column.sortable}
+              textValue={column.name}
             >
               {column.name}
             </TableColumn>

@@ -20,8 +20,8 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "@nextui-org/react";
-import CreatePaymentTermItemModal from "./../payment-term-item/modal/CreatePaymentTermItem";
-import DeletePaymentTermItemModal from "./../payment-term-item/modal/DeletePaymentTermItem";
+import CreatePaymentTermItemModal from "../payment-term-item/modal/CreatePaymentTermItem";
+import DeletePaymentTermItemModal from "../payment-term-item/modal/DeletePaymentTermItem";
 
 import React, { useState } from "react";
 
@@ -159,7 +159,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                         </svg>
                       </button>
 
-                      <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-36 hidden z-50 sm:mt-3 bg-white sm:shadow-md rounded-lg p-2 dark:bg-zinc-800 sm:dark:border dark:border-zinc-700 dark:divide-zinc-700 before:absolute sm:border before:-right-5 before:top-0 before:h-full before:w-5 top-0 left-full !mx-[10px]">
+                      <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-36 hidden z-50 sm:mt-3 bg-white sm:shadow-md rounded-lg p-2 dark:bg-zinc-900 sm:dark:border dark:border-zinc-700 dark:divide-zinc-700 before:absolute sm:border before:-right-5 before:top-0 before:h-full before:w-5 top-0 left-full !mx-[10px]">
                         <Button
                           variant="light"
                           onClick={onOpenDeleteModal}
@@ -208,7 +208,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                         </svg>
                       </button>
 
-                      <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-36 hidden z-50 sm:mt-3 bg-white sm:shadow-md rounded-lg p-2 dark:bg-zinc-800 sm:dark:border dark:border-zinc-700 dark:divide-zinc-700 before:absolute sm:border before:-right-5 before:top-0 before:h-full before:w-5 top-0 left-full !mx-[10px]">
+                      <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-36 hidden z-50 sm:mt-3 bg-white sm:shadow-md rounded-lg p-2 dark:bg-zinc-900 sm:dark:border dark:border-zinc-700 dark:divide-zinc-700 before:absolute sm:border before:-right-5 before:top-0 before:h-full before:w-5 top-0 left-full !mx-[10px]">
                         <Button
                           variant="light"
                           onClick={onOpenDeleteModal}
@@ -258,7 +258,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                         </svg>
                       </button>
 
-                      <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-36 hidden z-50 sm:mt-3 bg-white sm:shadow-md rounded-lg p-2 dark:bg-zinc-800 sm:dark:border dark:border-zinc-700 dark:divide-zinc-700 before:absolute sm:border before:-right-5 before:top-0 before:h-full before:w-5 top-0 left-full !mx-[10px]">
+                      <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-36 hidden z-50 sm:mt-3 bg-white sm:shadow-md rounded-lg p-2 dark:bg-zinc-900 sm:dark:border dark:border-zinc-700 dark:divide-zinc-700 before:absolute sm:border before:-right-5 before:top-0 before:h-full before:w-5 top-0 left-full !mx-[10px]">
                         <Button
                           variant="light"
                           onClick={onOpenDeleteModal}

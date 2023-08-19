@@ -11,8 +11,8 @@ import {
   Selection,
 } from "@nextui-org/react";
 import { columns, exclusions } from "../data";
-import CreateExclusionModal from "../modal/CreateExclusionModal";
-import DeleteExclusionModal from "../modal/DeleteExclusionModal";
+import CreateExclusionModal from "../modal/CreateExclusion";
+import DeleteExclusionModal from "../modal/DeleteExclusion";
 import BottomContent from "./BottomContent";
 import TopContent from "./TopContent";
 import Actions from "./Actions";
