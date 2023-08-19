@@ -167,7 +167,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                           startContent={
                             <PencilSquareIcon className="w-5 h-5 mt-0.5 text-default-500" />
                           }
-                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full  border-white"
+                          className="hover:bg-zinc-300  hover:dark:text-zinc-400 hover:dark:bg-zinc-700 w-full dark:text-zinc-400 border-white"
                         >
                           Edit
                         </Button>
@@ -179,7 +179,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                           startContent={
                             <TrashIcon className="h-5 w-5 mt-0.5 currentColor" />
                           }
-                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full  border-white"
+                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full border-none"
                         >
                           Delete
                         </Button>
@@ -216,7 +216,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                           startContent={
                             <PencilSquareIcon className="w-5 h-5 mt-0.5 text-default-500" />
                           }
-                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full  border-white"
+                          className="hover:bg-zinc-300  hover:dark:text-zinc-400 hover:dark:bg-zinc-700 w-full dark:text-zinc-400 border-white"
                         >
                           Edit
                         </Button>
@@ -228,7 +228,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                           startContent={
                             <TrashIcon className="h-5 w-5 mt-0.5 currentColor" />
                           }
-                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full  border-white"
+                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full border-none"
                         >
                           Delete
                         </Button>
@@ -266,7 +266,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                           startContent={
                             <PencilSquareIcon className="w-5 h-5 mt-0.5 text-default-500" />
                           }
-                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full  border-white"
+                          className="hover:bg-zinc-300  hover:dark:text-zinc-400 hover:dark:bg-zinc-700 w-full dark:text-zinc-400 border-white"
                         >
                           Edit
                         </Button>
@@ -278,7 +278,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                           startContent={
                             <TrashIcon className="h-5 w-5 mt-0.5 currentColor" />
                           }
-                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full  border-white"
+                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full border-none"
                         >
                           Delete
                         </Button>
@@ -315,7 +315,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                           startContent={
                             <PencilSquareIcon className="w-5 h-5 mt-0.5 text-default-500" />
                           }
-                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full  border-white"
+                          className="hover:bg-zinc-300  hover:dark:text-zinc-400 hover:dark:bg-zinc-700 w-full dark:text-zinc-400 border-white"
                         >
                           Edit
                         </Button>
@@ -327,7 +327,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                           startContent={
                             <TrashIcon className="h-5 w-5 mt-0.5 currentColor" />
                           }
-                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full  border-white"
+                          className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 w-full border-none"
                         >
                           Delete
                         </Button>
