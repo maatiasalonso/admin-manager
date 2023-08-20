@@ -83,7 +83,7 @@ export const Navbar = () => {
                     ? "danger"
                     : "foreground"
                 }
-                href="#"
+                href={item.href === "/configuration" ? item.href : "#"}
                 size="lg"
               >
                 {item.label}
