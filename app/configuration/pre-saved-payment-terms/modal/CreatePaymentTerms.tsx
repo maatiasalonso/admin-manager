@@ -130,7 +130,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                             </ModalHeader>
                             <ModalBody>
                               <div className="flex">
-                                <Card className="w-full">
+                                <Card className="w-full shadow-none">
                                   <CardHeader className="flex gap-3 justify-between">
                                     Payment Term #1
                                     <Button variant="light">
@@ -140,7 +140,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                                 </Card>
                               </div>
                               <div className="flex">
-                                <Card className="w-full">
+                                <Card className="w-full shadow-none">
                                   <CardHeader className="flex gap-3 justify-between">
                                     Payment Term #2
                                     <Button variant="light">
@@ -150,7 +150,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                                 </Card>
                               </div>
                               <div className="flex">
-                                <Card className="w-full">
+                                <Card className="w-full shadow-none">
                                   <CardHeader className="flex gap-3 justify-between">
                                     Payment Term #3
                                     <Button variant="light">
@@ -160,7 +160,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                                 </Card>
                               </div>
                               <div className="flex">
-                                <Card className="w-full">
+                                <Card className="w-full shadow-none">
                                   <CardHeader className="flex gap-3 justify-between">
                                     Payment Term #4
                                     <Button variant="light">
