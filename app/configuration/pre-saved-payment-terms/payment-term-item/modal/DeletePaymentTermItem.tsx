@@ -27,7 +27,7 @@ const DeleteModal: React.FC<DeleteModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <>
-      <Modal isOpen={isOpen} onOpenChange={onClose} placement="center">
+      <Modal isOpen={isOpen} onOpenChange={onClose}>
         <ModalContent className="pt-8 pb-2">
           {() => (
             <>
@@ -41,7 +41,7 @@ const DeleteModal: React.FC<DeleteModalProps> = ({ isOpen, onClose }) => {
                   </div>
                 </div>
               </ModalBody>
-              <ModalFooter className="w-full flex justify-center">
+              <ModalFooter className="w-full sm:flex-row sm:justify-end flex-col-reverse justify-center">
                 <Button
                   color="default"
                   onClick={onClose}

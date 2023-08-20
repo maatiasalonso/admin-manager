@@ -26,7 +26,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <>
-      <Modal isOpen={isOpen} onOpenChange={onClose} placement="center">
+      <Modal isOpen={isOpen} onOpenChange={onClose}>
         <ModalContent>
           {() => (
             <>
@@ -45,7 +45,7 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                   maxRows={8}
                 />
               </ModalBody>
-              <ModalFooter>
+              <ModalFooter className="w-full sm:flex-row sm:justify-end flex-col-reverse justify-center">
                 <Button
                   color="default"
                   onClick={onClose}
