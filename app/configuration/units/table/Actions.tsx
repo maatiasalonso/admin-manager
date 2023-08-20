@@ -1,3 +1,4 @@
+"use client";
 import {
   EllipsisVerticalIcon,
   PencilSquareIcon,
@@ -9,6 +10,11 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
+  useDisclosure,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
 } from "@nextui-org/react";
 
 interface TableActionsProps {
@@ -16,33 +22,79 @@ interface TableActionsProps {
 }
 
 const TableActions: React.FC<TableActionsProps> = ({ onOpenDeleteModal }) => {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   return (
-    <div className="relative flex justify-end items-center gap-2">
-      <Dropdown>
-        <DropdownTrigger>
-          <Button isIconOnly size="sm" variant="light">
-            <EllipsisVerticalIcon className="text-default-500 w-6 h-6 font-semibold" />
-          </Button>
-        </DropdownTrigger>
-        <DropdownMenu>
-          <DropdownItem
-            startContent={
-              <PencilSquareIcon className="w-5 h-5 mt-0.5 text-default-500" />
-            }
-          >
-            Edit
-          </DropdownItem>
-          <DropdownItem
-            className="text-danger hover:text-white"
-            color="danger"
-            startContent={<TrashIcon className="h-5 w-5 mt-0.5 currentColor" />}
-            onClick={onOpenDeleteModal}
-          >
-            Delete
-          </DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-    </div>
+    <>
+      <div className="sm:relative sm:flex justify-end items-center gap-2 hidden">
+        <Dropdown className="static">
+          <DropdownTrigger>
+            <Button isIconOnly size="sm" variant="light">
+              <EllipsisVerticalIcon className="text-default-500 w-6 h-6 font-semibold" />
+            </Button>
+          </DropdownTrigger>
+          <DropdownMenu>
+            <DropdownItem
+              startContent={
+                <PencilSquareIcon className="w-5 h-5 mt-0.5 text-default-500" />
+              }
+            >
+              Edit
+            </DropdownItem>
+            <DropdownItem
+              className="text-danger hover:text-white"
+              color="danger"
+              startContent={
+                <TrashIcon className="h-5 w-5 mt-0.5 currentColor" />
+              }
+              onClick={onOpenDeleteModal}
+            >
+              Delete
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+      </div>
+      <div className="sm:hidden justify-end items-center flex">
+        <Button isIconOnly size="sm" variant="light" onPress={onOpen}>
+          <EllipsisVerticalIcon className="text-default-500 w-6 h-6 font-semibold" />
+        </Button>
+        <Modal
+          isOpen={isOpen}
+          onOpenChange={onOpenChange}
+          isDismissable={false}
+        >
+          <ModalContent>
+            {(onClose) => (
+              <>
+                <ModalHeader className="flex flex-col gap-1">
+                  Unit #N
+                </ModalHeader>
+                <ModalFooter className="w-full sm:flex-row sm:justify-end flex-col justify-center">
+                  <Button
+                    startContent={
+                      <PencilSquareIcon className="w-5 h-5 mt-0.5 text-default-500" />
+                    }
+                    className="hover:bg-default-200 px-8 hover:dark:bg-default-100"
+                  >
+                    Edit
+                  </Button>
+                  <Button
+                    className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 px-8"
+                    color="danger"
+                    startContent={
+                      <TrashIcon className="h-5 w-5 mt-0.5 currentColor" />
+                    }
+                    onClick={onOpenDeleteModal}
+                  >
+                    Delete
+                  </Button>
+                </ModalFooter>
+              </>
+            )}
+          </ModalContent>
+        </Modal>
+      </div>
+    </>
   );
 };
 
