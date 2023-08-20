@@ -381,7 +381,6 @@ export default function App() {
               </ModalHeader>
               <ModalBody>
                 <Input
-                  autoFocus
                   label="Email"
                   placeholder="Enter your email"
                   variant="bordered"
