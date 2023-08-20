@@ -8,6 +8,7 @@ import {
   DocumentTextIcon,
   BanknotesIcon,
   PencilIcon,
+  ScaleIcon,
 } from "@heroicons/react/24/outline";
 
 export default function Configuration() {
@@ -62,6 +63,24 @@ export default function Configuration() {
                 </div>
                 <p className="text-xl font-semibold">
                   Pre-Saved Proposal Items
+                </p>
+              </div>
+            </CardHeader>
+            <CardBody className="pt-1">
+              <p>
+                Define specific system parameters that can be selected during
+                the creation or editing of proposals.
+              </p>
+            </CardBody>
+          </Card>
+        </Link>
+        <Link href="/configuration/units">
+          <Card className="max-w-[500px] h-full" isPressable isHoverable>
+            <CardHeader className="flex gap-3 mt-2">
+              <div className="flex flex-col">
+                <p className="text-xl ml-2 font-semibold flex gap-4">
+                  <ScaleIcon className="w-8 h-8 text-gray-700 dark:text-gray-300" />
+                  Units
                 </p>
               </div>
             </CardHeader>

@@ -14,11 +14,6 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
-  Textarea,
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
 } from "@nextui-org/react";
 import CreatePaymentTermItemModal from "../payment-term-item/modal/CreatePaymentTermItem";
 import DeletePaymentTermItemModal from "../payment-term-item/modal/DeletePaymentTermItem";
@@ -29,25 +24,6 @@ interface CreateModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
-const items = [
-  {
-    key: "new",
-    label: "Option 1",
-  },
-  {
-    key: "copy",
-    label: "Option 2",
-  },
-  {
-    key: "edit",
-    label: "Option 3",
-  },
-  {
-    key: "delete",
-    label: "Option 4",
-  },
-];
 
 const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
