@@ -2,18 +2,22 @@
 
 import {
   DocumentTextIcon,
+  EllipsisVerticalIcon,
   PencilSquareIcon,
   PlusIcon,
   TrashIcon,
 } from "@heroicons/react/24/outline";
 import {
   Button,
+  Card,
+  CardHeader,
   Input,
   Modal,
   ModalBody,
   ModalContent,
   ModalFooter,
   ModalHeader,
+  useDisclosure,
 } from "@nextui-org/react";
 import CreatePaymentTermItemModal from "../payment-term-item/modal/CreatePaymentTermItem";
 import DeletePaymentTermItemModal from "../payment-term-item/modal/DeletePaymentTermItem";
@@ -27,6 +31,13 @@ interface CreateModalProps {
 
 const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
+
+  const {
+    isOpen: isOpenTest,
+    onOpen: onOpenTest,
+    onOpenChange: onOpenChangeTest,
+    onClose: onCloseTest,
+  } = useDisclosure();
 
   const [isCreateModalOpen, setCreateModalOpen] = useState(false);
 
@@ -99,10 +110,79 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                   <div className="flex gap-4">
                     <button
                       type="button"
-                      className="hs-dropdown-toggle dark:hover:text-zinc-500 dark:text-zinc-400 flex hover:text-zinc-400 hover:border-zinc-400 py-2 rounded-xl items-center border-2 justify-center text-zinc-600 text-sm w-full border-zinc-600"
+                      className="hs-dropdown-toggle dark:hover:text-zinc-500 dark:text-zinc-400 hidden sm:flex hover:text-zinc-400 hover:border-zinc-400 py-2 rounded-xl items-center border-2 justify-center text-zinc-600 text-sm w-full border-zinc-600"
                     >
                       4 Payment Term Items
                     </button>
+                    <Button
+                      onPress={onOpenTest}
+                      variant="ghost"
+                      className="sm:hidden w-full text-zinc-400"
+                    >
+                      4 Payment Term Items
+                    </Button>
+                    <Modal isOpen={isOpenTest} onOpenChange={onOpenChangeTest}>
+                      <ModalContent>
+                        {(onClose) => (
+                          <>
+                            <ModalHeader className="flex flex-col gap-1">
+                              Payment Term Items
+                            </ModalHeader>
+                            <ModalBody>
+                              <div className="flex">
+                                <Card className="w-full">
+                                  <CardHeader className="flex gap-3 justify-between">
+                                    Payment Term #1
+                                    <Button variant="light">
+                                      <EllipsisVerticalIcon className="w-5 h-5" />
+                                    </Button>
+                                  </CardHeader>
+                                </Card>
+                              </div>
+                              <div className="flex">
+                                <Card className="w-full">
+                                  <CardHeader className="flex gap-3 justify-between">
+                                    Payment Term #2
+                                    <Button variant="light">
+                                      <EllipsisVerticalIcon className="w-5 h-5" />
+                                    </Button>
+                                  </CardHeader>
+                                </Card>
+                              </div>
+                              <div className="flex">
+                                <Card className="w-full">
+                                  <CardHeader className="flex gap-3 justify-between">
+                                    Payment Term #3
+                                    <Button variant="light">
+                                      <EllipsisVerticalIcon className="w-5 h-5" />
+                                    </Button>
+                                  </CardHeader>
+                                </Card>
+                              </div>
+                              <div className="flex">
+                                <Card className="w-full">
+                                  <CardHeader className="flex gap-3 justify-between">
+                                    Payment Term #4
+                                    <Button variant="light">
+                                      <EllipsisVerticalIcon className="w-5 h-5" />
+                                    </Button>
+                                  </CardHeader>
+                                </Card>
+                              </div>
+                            </ModalBody>
+                            <ModalFooter>
+                              <Button
+                                color="danger"
+                                variant="light"
+                                onPress={onCloseTest}
+                              >
+                                Close
+                              </Button>
+                            </ModalFooter>
+                          </>
+                        )}
+                      </ModalContent>
+                    </Modal>
                     <Button
                       color="primary"
                       className="hover:bg-primary-300 hover:dark:bg-primary-100"
@@ -111,8 +191,8 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
                       <PlusIcon className="w-5 h-5" />
                     </Button>
                   </div>
-                  <div className="hs-dropdown-menu min-w-[19rem] transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 sm:mt-3 bg-white shadow-md rounded-xl p-2 dark:bg-zinc-900 sm:dark:border dark:border-zinc-700 dark:divide-zinc-700 before:absolute top-full border before:-top-5 before:left-0 before:w-full before:h-5">
-                    <div className="hs-dropdown relative [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] z-50">
+                  <div className="hs-dropdown-menu min-w-[19rem] transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 z-10 sm:mt-3 bg-white shadow-md rounded-xl p-2 dark:bg-zinc-900 sm:dark:border dark:border-zinc-700 dark:divide-zinc-700 before:absolute top-full border before:-top-5 before:left-0 before:w-full before:h-5 hidden">
+                    <div className="hs-dropdown relative [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] z-50 hidden sm:block">
                       <button
                         type="button"
                         className="w-full flex justify-between items-center text-sm text-zinc-800 rounded-md py-2 px-3 hover:bg-zinc-100 focus:ring-2 focus:ring-zinc-500 dark:text-zinc-400 dark:hover:bg-zinc-700 dark:hover:text-zinc-300"
