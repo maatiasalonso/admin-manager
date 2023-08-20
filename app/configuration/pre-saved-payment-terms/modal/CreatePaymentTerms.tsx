@@ -86,7 +86,6 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
               <ModalBody>
                 <Input
                   isClearable
-                  autoFocus
                   label="Name"
                   placeholder="Enter payment term name"
                   variant="bordered"
