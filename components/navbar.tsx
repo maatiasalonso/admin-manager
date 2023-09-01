@@ -21,20 +21,16 @@ import {
   Avatar,
   useDisclosure,
   Divider,
+  Input,
 } from "@nextui-org/react";
 
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
-
 import { link as linkStyles } from "@nextui-org/theme";
-
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
 import clsx from "clsx";
-
 import { ThemeSwitch } from "@/components/theme-switch";
-
 import { Logo } from "@/components/icons";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
