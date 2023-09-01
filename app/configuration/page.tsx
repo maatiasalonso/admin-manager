@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
-import BreadcrumbConfiguration from "./Breadcrumb";
+import BreadcrumbComponent from "@/components/breadcrumb";
 import {
   NoSymbolIcon,
   DocumentIcon,
@@ -11,10 +11,15 @@ import {
   ScaleIcon,
 } from "@heroicons/react/24/outline";
 
+const breadcrumbArray = [
+  { link: "/", name: "Home" },
+  { link: null, name: "Configuration" },
+];
+
 export default function Configuration() {
   return (
     <>
-      <BreadcrumbConfiguration />
+      <BreadcrumbComponent breadcrumbArray={breadcrumbArray} />
 
       <h1 className="text-3xl font-semibold my-8">Configuration</h1>
 

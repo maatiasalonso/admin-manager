@@ -28,7 +28,12 @@ const CreateModal: React.FC<CreateModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <>
-      <Modal isOpen={isOpen} onOpenChange={onClose}>
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onClose}
+        hideCloseButton={isLoading}
+        isDismissable={!isLoading}
+      >
         <ModalContent>
           {() => (
             <>
