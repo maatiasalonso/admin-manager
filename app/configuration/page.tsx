@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
 import BreadcrumbComponent from "@/components/breadcrumb";
 import {
@@ -10,16 +10,26 @@ import {
   PencilIcon,
   ScaleIcon,
 } from "@heroicons/react/24/outline";
+import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 
-const breadcrumbArray = [
-  { link: "/", name: "Home" },
-  { link: null, name: "Configuration" },
-];
+interface ParentComponentProps {
+  children: React.ReactNode;
+}
 
-export default function Configuration() {
+const Configuration: React.FC<ParentComponentProps> = ({ children }) => {
+  const { setBreadcrumbArray } = useBreadcrumb();
+
+  useEffect(() => {
+    setBreadcrumbArray([
+      { link: "/", name: "Home" },
+      { link: null, name: "Configuration" },
+    ]);
+  }, [setBreadcrumbArray]);
+
   return (
     <>
-      <BreadcrumbComponent breadcrumbArray={breadcrumbArray} />
+      <BreadcrumbComponent />
+      {children}
 
       <h1 className="text-3xl font-semibold my-8">Configuration</h1>
 
@@ -100,4 +110,6 @@ export default function Configuration() {
       </div>
     </>
   );
-}
+};
+
+export default Configuration;
