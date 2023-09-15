@@ -8,7 +8,7 @@ interface ParentComponentProps {
   children: React.ReactNode;
 }
 
-const Units: React.FC<ParentComponentProps> = ({ children }) => {
+const Units = () => {
   const { breadcrumbArray, setBreadcrumbArray } = useBreadcrumb();
 
   // useEffect(() => {
@@ -18,7 +18,7 @@ const Units: React.FC<ParentComponentProps> = ({ children }) => {
   return (
     <>
       <BreadcrumbComponent />
-      {children}
+      {/* {children} */}
 
       <h1 className="text-3xl font-semibold my-8">List of Units</h1>
 
