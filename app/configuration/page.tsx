@@ -12,11 +12,11 @@ import {
 } from "@heroicons/react/24/outline";
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 
-interface ParentComponentProps {
-  children: React.ReactNode;
-}
+// interface ParentComponentProps {
+//   children: React.ReactNode;
+// }
 
-const Configuration: React.FC<ParentComponentProps> = ({ children }) => {
+const Configuration = () => {
   const { setBreadcrumbArray } = useBreadcrumb();
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Configuration: React.FC<ParentComponentProps> = ({ children }) => {
   return (
     <>
       <BreadcrumbComponent />
-      {children}
+      {/* {children} */}
 
       <h1 className="text-3xl font-semibold my-8">Configuration</h1>
 
