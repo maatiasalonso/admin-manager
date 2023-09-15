@@ -10,7 +10,7 @@ const breadcrumbArray = [
 export default function Exclusions() {
   return (
     <>
-      <BreadcrumbComponent breadcrumbArray={breadcrumbArray} />
+      {/* <BreadcrumbComponent breadcrumbArray={breadcrumbArray} /> */}
 
       <h1 className="text-3xl font-semibold my-8">List of Exclusions</h1>
 
