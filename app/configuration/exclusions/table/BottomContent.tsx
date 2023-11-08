@@ -1,4 +1,10 @@
-import { Button, Pagination, Selection } from "@nextui-org/react";
+import {
+  Button,
+  Pagination,
+  PaginationItem,
+  PaginationCursor,
+  Selection,
+} from "@nextui-org/react";
 import React from "react";
 
 interface TableBottomContentProps {
@@ -50,7 +56,7 @@ const TableBottomContent: React.FC<TableBottomContentProps> = ({
           size="sm"
           variant="flat"
           onPress={onPreviousPage}
-          className="hover:bg-default-300"
+          className="dark:hover:bg-zinc-700/90 hover:bg-zinc-300 transition-all"
         >
           Previous
         </Button>
@@ -59,7 +65,7 @@ const TableBottomContent: React.FC<TableBottomContentProps> = ({
           size="sm"
           variant="flat"
           onPress={onNextPage}
-          className="hover:bg-default-300"
+          className="dark:hover:bg-zinc-700/90 hover:bg-zinc-300 transition-all"
         >
           Next
         </Button>

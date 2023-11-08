@@ -51,7 +51,7 @@ const DeleteModal: React.FC<DeleteModalProps> = ({ isOpen, onClose }) => {
                 <Button
                   color="default"
                   onClick={onClose}
-                  className="hover:bg-default-200 px-8 hover:dark:bg-default-100"
+                  className="hover:bg-default/70 px-8 transition-all"
                   isDisabled={isLoading}
                 >
                   Cancel
@@ -60,7 +60,7 @@ const DeleteModal: React.FC<DeleteModalProps> = ({ isOpen, onClose }) => {
                   color="danger"
                   onClick={remove}
                   isLoading={isLoading}
-                  className="hover:bg-danger-300  hover:dark:text-white hover:dark:bg-danger-100 px-8"
+                  className="hover:bg-danger/70  hover:dark:text-white px-8 transition-all"
                 >
                   {isLoading ? "Deleting" : "Delete"}
                 </Button>
