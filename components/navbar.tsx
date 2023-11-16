@@ -79,7 +79,7 @@ export const Navbar = () => {
       </Modal>
       <Button
         aria-label="Search"
-        className="text-sm w-80 justify-between hover:dark:bg-zinc-700 hover:bg-zinc-300"
+        className="text-sm w-80 justify-between dark:hover:bg-zinc-800/90 hover:bg-zinc-300/90 transition-all"
         variant="flat"
         onPress={onOpen}
         endContent={
@@ -144,7 +144,7 @@ export const Navbar = () => {
               <Avatar
                 isBordered
                 as="button"
-                className="transition-transform w-9 h-9"
+                className="w-9 h-9 hover:scale-105 transition-all"
                 src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
               />
             </DropdownTrigger>

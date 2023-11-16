@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
-import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
+import { Card, CardHeader, CardBody } from "@nextui-org/react";
 import {
   NoSymbolIcon,
   DocumentIcon,
