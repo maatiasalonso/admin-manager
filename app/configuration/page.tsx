@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
 import { Card, CardHeader, CardBody } from "@nextui-org/react";
 import {
   NoSymbolIcon,
@@ -9,32 +8,13 @@ import {
   BanknotesIcon,
   PencilIcon,
   ScaleIcon,
-  HomeIcon,
-  Cog8ToothIcon,
 } from "@heroicons/react/24/outline";
-import { useRouter } from "next/navigation";
-
-interface BreadcrumbItemInterface {
-  name: string;
-  href?: string;
-  icon: any;
-  class?: string;
-}
+import { useRouter, usePathname } from "next/navigation";
+import { Breadcrumb } from "@/components/providers/breadcrumb";
 
 const Configuration = () => {
   const router = useRouter();
-
-  const items: BreadcrumbItemInterface[] = [
-    {
-      name: "Home",
-      href: "/",
-      icon: <HomeIcon className="w-4 h-4 mr-1" />,
-    },
-    {
-      name: "Configuration",
-      icon: <Cog8ToothIcon className="w-4 h-4 mr-1" />,
-    },
-  ];
+  const currentPath = usePathname();
 
   const configurationItems = [
     {
@@ -79,23 +59,8 @@ const Configuration = () => {
 
   return (
     <>
-      <Breadcrumbs variant="solid" classNames={{ list: "px-3" }}>
-        {items.map((item: BreadcrumbItemInterface) => {
-          return (
-            <BreadcrumbItem
-              key={item.href}
-              className={`${item.class} dark:text-white text-zinc-900`}
-              href={item.href}
-              startContent={item.icon}
-            >
-              {item.name}
-            </BreadcrumbItem>
-          );
-        })}
-      </Breadcrumbs>
-
+      <Breadcrumb currentPath={currentPath} />
       <h1 className="text-3xl font-semibold my-8">Configuration</h1>
-
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-y-6">
         {configurationItems.map((configurationItem) => {
           return (

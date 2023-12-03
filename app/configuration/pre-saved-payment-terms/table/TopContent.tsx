@@ -23,9 +23,9 @@ const TableTopContent: React.FC<TableTopContentProps> = ({
       <div className="flex justify-between gap-3 items-end">
         <Input
           isClearable
-          className="w-full sm:max-w-[44%]"
+          className="w-full sm:max-w-[44%] transition-all"
           placeholder="Search by name..."
-          startContent={<MagnifyingGlassIcon className="w-4 h-4" />}
+          startContent={<MagnifyingGlassIcon className="w-4 h-4 mr-2" />}
           value={filterValue}
           onClear={onClear} // Using it here
           onValueChange={onSearchChange}
@@ -35,7 +35,7 @@ const TableTopContent: React.FC<TableTopContentProps> = ({
             color="primary"
             onPress={onOpenCreateModal}
             endContent={<PlusIcon className="h-5 w-5 stroke-2" />}
-            className="hover:bg-primary-300 hover:dark:bg-primary-100"
+            className="hover:bg-primary/70 transition-all"
           >
             Add Payment Term
           </Button>

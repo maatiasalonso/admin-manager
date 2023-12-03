@@ -1,28 +1,12 @@
+import { siteNavItems } from "./site-nav-items";
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Admin Dashboard",
   description: "Make beautiful websites regardless of your design experience.",
-  navItems: [
-    {
-      label: "Configuration",
-      href: "/configuration",
-    },
-  ],
-  navMenuItems: [
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Configuration",
-      href: "/configuration",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
-    },
-  ],
+  navItems: [...siteNavItems],
+  navMenuItems: [...siteNavItems],
   links: {
     github: "https://github.com/nextui-org/nextui",
     twitter: "https://twitter.com/getnextui",
